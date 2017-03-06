@@ -1,0 +1,20 @@
+{
+  "name": "my remote application",
+  "version": "1.0.0",
+  "description": "A remote application for system control",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "rempte",
+    "mqtt"
+  ],
+  "author": "iotone.ir",
+  "license": "",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
+
