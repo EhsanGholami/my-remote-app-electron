@@ -10,14 +10,17 @@ const url = require('url')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let settingWindow
 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800, 
-    height: 600,
-    frame: false
+    width: 1024, 
+    height: 768,
+    frame: true
   })
+
+  //mainWindow.setMenu(null)
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -27,7 +30,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -36,7 +39,35 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+mainWindow.once('ready-to-show', function () {
+    console.log('222222222222222222222222222222')
+  })
+  
+  // mainWindow.once('ready-to-show', () => {
+//     settingWindow = new BrowserWindow({parent: mainWindow, modal: true, show: false})
+//     settingWindow.loadURL('https://github.com')
+//     settingWindow.show()
+
+//   })
+
+/*const settingBtn = document.getElementById('settingBtn')
+
+settingBtn.addEventListener('click', function (event) {
+alert('ssssssssssssssssssssssssssssssssss');
+  const modalPath = path.join('file://', __dirname, 'modal.html')
+  let sWin = new BrowserWindow({ width: 800, height: 600 })
+  sWin.on('close', function () { sWin = null })
+  sWin.loadURL(modalPath)
+  sWin.show()
+})*/
+
+  
 }
+
+
+
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
