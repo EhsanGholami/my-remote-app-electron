@@ -9,12 +9,15 @@ const url = require('url')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
-let settingWindow
+var mainWindow
+var settingWindow
 
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    /*webPreferences: {
+      nodeIntegration: false
+    },*/
     width: 1024, 
     height: 768,
     frame: true
@@ -38,10 +41,11 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+    settingWindow = null
   })
 
-mainWindow.once('ready-to-show', function () {
-    console.log('222222222222222222222222222222')
+  mainWindow.on('move', function () {
+    console.log(settingWindow)
   })
   
   // mainWindow.once('ready-to-show', () => {

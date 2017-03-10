@@ -20,8 +20,8 @@
               <h3 class="masthead-brand">IotOne</h3>
               <nav class="nav nav-masthead" style="direction: rtl;">
                 <a class="nav-link active" href="#">Home</a>
-                <a id="" class="nav-link" href="#">Setting</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a id="settingBtn" class="nav-link" href="#">Setting</a>
+                <a class="nav-link" href="http://ehsangholami.ir" target="_blank">Contact</a>
               </nav>
             </div>
           </div>
@@ -34,12 +34,12 @@
               <a href="#" class="btn btn-lg btn-secondary">Click</a>
             </p>
 
-            <button class="btn btn-lg btn-secondary" id="settingBtn">View Demo</button>
+            <!--<button class="btn btn-lg btn-secondary">View Demo</button>-->
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Copy Right <a href="http://iotone.ir">IotOne</a>, by <a href="http://ehsangholami.ir">Ehsan Gholami</a>.</p>
+              <p>Copy Right <a href="http://iotone.ir" target="_blank">IotOne</a>, by <a href="http://ehsangholami.ir" target="_blank">Ehsan Gholami</a>.</p>
             </div>
           </div>
 
@@ -50,6 +50,9 @@
     </div>
   </body>
 
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script type="text/javascript" src="assets/js/tether.min.js"></script>
   <script>
     // You can also require other files to run in this process
     require('./renderer.js')
@@ -57,7 +60,21 @@
     require('./setting-windows')
 
 
-    require('./assets/js/jquery.min')
+    /*require('./assets/js/jquery.min')*/
+    /*require('./assets/js/tether.min')*/
     require('./assets/bootstrap/js/bootstrap')
+
+
+    /*window.nodeRequire = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;*/
   </script>
+
+  <!--<script type="text/javascript" src="renderer.js"></script>
+  <script type="text/javascript" src="setting-windows.js"></script>
+
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>-->
+  
 </html>
